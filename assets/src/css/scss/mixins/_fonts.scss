@@ -1,0 +1,138 @@
+// Font Mixins
+//--------------------------------------------//
+
+// Font Face
+// @include font-face(Roboto, "./assets/Roboto", 400, normal);
+
+@mixin font-face($font-name, $path, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: quote($font-name);
+		font-style: $style;
+		font-weight: $weight;
+		font-display: swap;
+		src: url($path + ".woff2?v=3.15") format("woff2"),
+			url($path + ".woff?v=3.15") format("woff");
+	}
+}
+
+// Function for converting a px based font-size to rem
+// @include font-rem(16px, 24px);
+
+@mixin font-rem($font-size, $line-height: 0) {
+	font-size: $font-size;
+	font-size: calc($font-size / 16px) * 1rem;
+
+	@if ($line-height > 0) {
+		line-height: $line-height;
+		line-height: calc($line-height / 16px) * 1rem;
+	}
+}
+
+// Text Shadow
+// @param {Size} $x [2px] - X
+// @param {Size} $y [2px] - Y
+// @param {Size} $blur [2px] - Blur
+// @include text-shadow(2px, 2px, 2px, rgba(0,0,0,.4));
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.4)) {
+	text-shadow: $x $y $blur $color;
+}
+
+// Text Overflow
+// @include text-truncate;
+
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Heading Type Scale
+// @include heading-level-10;
+
+@mixin heading-level-10 {
+	@include font-rem(80px, 80px);
+}
+
+@mixin heading-level-9 {
+	@include font-rem(60px, 70px);
+}
+
+@mixin heading-level-8 {
+	@include font-rem(56px, 66px);
+}
+
+@mixin heading-level-7 {
+	@include font-rem(48px, 58px);
+}
+
+@mixin heading-level-6 {
+	@include font-rem(40px, 50px);
+}
+
+@mixin heading-level-5 {
+	@include font-rem(36px, 46px);
+}
+
+@mixin heading-level-4 {
+	@include font-rem(32px, 42px);
+}
+
+@mixin heading-level-3 {
+	@include font-rem(30px, 40px);
+}
+
+@mixin heading-level-2 {
+	@include font-rem(28px, 38px);
+}
+
+@mixin heading-level-1 {
+	@include font-rem(24px, 34px);
+}
+
+// Body Type Scale
+// @include body-level-10;
+
+@mixin body-level-10 {
+	@include font-rem(48px, 58px);
+}
+
+@mixin body-level-9 {
+	@include font-rem(32px, 42px);
+}
+
+@mixin body-level-8 {
+	@include font-rem(28px, 38px);
+}
+
+@mixin body-level-7 {
+	@include font-rem(24px, 34px);
+}
+
+@mixin body-level-6 {
+	@include font-rem(22px, 32px);
+}
+
+@mixin body-level-5 {
+	@include font-rem(20px, 30px);
+}
+
+@mixin body-level-4 {
+	@include font-rem(18px, 28px);
+}
+
+@mixin body-level-3 {
+	@include font-rem(16px, 26px);
+}
+
+@mixin body-level-2 {
+	@include font-rem(14px, 24px);
+}
+
+@mixin body-level-1 {
+	@include font-rem(12px, 22px);
+}
+
+@mixin body-level-0 {
+	@include font-rem(10px, 14px);
+}

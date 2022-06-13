@@ -1,0 +1,49 @@
+/*!
+
+Theme Name: WP Starter Theme
+Theme URI: https://www.michaelboyko.ca/
+Description: Theme for WP Starter Theme
+Author: Michael Boyko
+Author URI: https://www.michaelboyko.ca/
+GitHub Theme URI: https://github.com/Cm2-Media
+Template: astra
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-starter-theme
+Tags: scss, gulp, wordpress, theme
+
+*/
+
+// Import variables and mixins.
+@import "scss/mixins/fonts";
+@import "scss/mixins/appearance";
+@import "scss/mixins/position";
+@import "scss/mixins/media-queries";
+
+// Base
+@import "scss/base/accessibility";
+@import "scss/base/alignments";
+@import "scss/base/animations";
+@import "scss/base/font-face";
+@import "scss/base/body";
+@import "scss/base/scrollbars";
+@import "scss/base/copy";
+@import "scss/base/buttons";
+@import "scss/base/forms";
+@import "scss/base/hr";
+@import "scss/base/media";
+
+// Sections
+
+// Layouts
+@import "scss/layout/header";
+@import "scss/layout/footer";
+
+// Pages
+@import "scss/pages/standard";
+@import "scss/pages/single";
+@import "scss/pages/home";
+@import "scss/pages/blog";
+@import "scss/pages/contact";
+@import "scss/pages/404";

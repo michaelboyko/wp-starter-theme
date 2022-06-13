@@ -1,0 +1,342 @@
+// Pages - Single Post
+//--------------------------------------------//
+
+.ast-single-post.single-post
+{
+
+    .blog-header-parent
+    {
+        a
+        {
+            color: var(--site-global-color-accent) !important;
+        }
+    }
+    .ast-builder-menu-mobile
+    {
+        .blog-header-parent
+        {
+            a
+            {
+                color: var(--site-global-color-accent) !important;
+            }
+        }
+    }
+
+    #content
+    {
+
+        background-color: var(--site-global-color-primary);
+        color: var(--site-global-color-text);
+
+        .ast-container
+        {
+
+            max-width: var(--site-global-layout-width-main);
+            padding: 0 20px !important;
+
+            @include r(lg)
+            {
+                max-width: 768px;
+            }
+
+            #primary
+            {
+
+                margin: 0;
+                padding: 0;
+
+                > .elementor-section
+                {
+
+                    padding: 250px 0 150px 0;
+
+                    @include r(lg)
+                    {
+                        padding: 210px 0 80px 0;
+                    }
+
+                }
+
+                .ast-article-single
+                {
+                    padding: 0;
+                    background: transparent !important;
+
+                    .article-header
+                    {
+
+                        display: grid;
+                        grid-template-columns: auto max-content;
+                        grid-gap: 20px;
+                        align-items: end;
+                        margin-bottom: 30px;
+
+                        @include r(lg)
+                        {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .entry-title
+                        {
+
+                            @include heading-level-6;
+                            max-width: 600px;
+                            margin-bottom: 0;
+
+                            @include r(lg)
+                            {
+                                @include heading-level-4;
+                                max-width: none;
+                            }
+
+                            @include r(sm)
+                            {
+                                @include heading-level-1;
+                            }
+
+                        }
+
+                    }
+
+                    .featured-image
+                    {
+
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 615px;
+                        margin-bottom: 40px;
+
+                        @include r(xxl)
+                        {
+                            height: 465px;
+                        }
+
+                        @include r(lg)
+                        {
+                            height: 330px;
+                        }
+
+                        @include r(md)
+                        {
+                            height: 280px;
+                        }
+
+                        @include r(sm)
+                        {
+                            height: 230px;
+                        }
+
+                        @include r(xsm)
+                        {
+                            height: 200px;
+                        }
+
+                    }
+
+                    .entry-content
+                    {
+
+                        margin: 0 auto;
+
+                        h2, h3, h4, h5, h6
+                        {
+
+                            color: var(--e-global-color-text);
+                            @include heading-level-4;
+                            text-align: center;
+                            margin-top: 0 !important;
+                            margin-bottom: 40px !important;
+
+                            @include r(sm) {
+                                @include heading-level-1;
+                            }
+
+                        }
+
+                        p
+                        {
+
+                            margin-bottom: 40px;
+
+                            &:last-child
+                            {
+                                margin-bottom: 0;
+                            }
+
+                        }
+
+                        .blog-gallery
+                        {
+
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-gap: 40px;
+                            margin-bottom: 40px;
+
+                            @include r(sm) {
+                                grid-template-columns: 1fr;
+                                grid-gap: 20px;
+                            }
+
+                            .blog-gallery-item
+                            {
+                                img
+                                {
+
+                                    display: block;
+                                    width: 100%;
+
+                                    @include r(sm) {
+                                        object-fit: cover;
+                                        max-height: 220px;
+                                    }
+
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    .share-article
+                    {
+
+                        text-align: left;
+
+                        a
+                        {
+
+                            padding: 0 0 0 15px;
+
+                            @include r(lg) {
+                                padding: 0 15px 0 0;
+                            }
+
+                        }
+
+                        img
+                        {
+                            width: 20px;
+                            height: 20px;
+                            transition: all 0.5s ease;
+                        }
+
+                    }
+
+                }
+
+                .blog-bottom-nav
+                {
+
+                    margin-left: calc(-100vw / 2 + 1330px / 2);
+                    margin-right: calc(-100vw / 2 + 1330px / 2);
+                    border-top: 1px var(--site-global-color-secondary) solid;
+                    padding: 40px 0;
+
+                    @media screen and (max-width: 1370px) {
+                        margin-left: -20px;
+                        margin-right: -20px;
+                    }
+
+                    @include r(lg)
+                    {
+                        margin-left: calc(-100vw / 2 + 728px / 2);
+                        margin-right: calc(-100vw / 2 + 728px / 2);
+                    }
+
+                    @include r(md)
+                    {
+                        margin-left: -20px;
+                        margin-right: -20px;
+                    }
+
+                    .container
+                    {
+                        max-width: var(--site-global-layout-width-main);
+                        margin: 0 auto;
+                        padding: 0 20px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        align-items: center;
+
+                        @media screen and (max-width: 1370px) {
+                            max-width: 100%;
+                        }
+
+                        @include r(sm)
+                        {
+                            display: block;
+                        }
+
+                    }
+
+                    #nav-below
+                    {
+    
+                        display: grid;
+                        grid-template-columns: repeat(2, max-content);
+    
+                        @include r(sm)
+                        {
+                            display: block;
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+    
+                        a
+                        {
+
+                            display: inline-block;
+                            font-weight: 400;
+                            margin-right: 40px;
+
+                            @include r(sm)
+                            {
+                                margin-right: 0;
+                            }
+
+                        }
+    
+                    }
+
+                    .share-article
+                    {
+
+                        text-align: right;
+
+                        @include r(sm)
+                        {
+                            text-align: center;
+                        }
+
+                        a
+                        {
+
+                            padding: 0 15px 0 0;
+
+                            &:last-child
+                            {
+                                padding: 0;
+                            }
+
+                        }
+
+                        img
+                        {
+                            width: 20px;
+                            height: 20px;
+                            transition: all 0.5s ease;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

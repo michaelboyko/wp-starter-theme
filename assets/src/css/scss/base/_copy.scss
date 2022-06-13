@@ -1,0 +1,196 @@
+// Typography - Copy
+//--------------------------------------------//
+
+address, blockquote, body, dd, dl, dt, fieldset, figure, html, legend, li, ol, p, pre, ul
+{
+	font-family: var(--site-global-font-primary);
+	@include body-level-4;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6,
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6
+{
+	color: var(--site-global-color-text);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.elementor-widget-heading .elementor-heading-title
+{
+	margin-bottom: 0;
+}
+
+.entry-content
+{
+	h1, h2, h3, h4, h5, h6, p, ul, ol
+	{
+		margin-bottom: 40px;
+	}
+}
+
+.entry-content h1, .entry-content h2
+{
+
+	@include heading-level-6;
+
+	@include r(xl)
+	{
+		@include heading-level-4;
+	}
+
+	@include r(lg)
+	{
+		@include heading-level-4;
+	}
+
+	@include r(sm)
+	{
+		@include heading-level-1;
+	}
+
+}
+
+.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6
+{
+
+	@include heading-level-4;
+
+	@include r(lg)
+	{
+		@include heading-level-1;
+	}
+
+	@include r(sm)
+	{
+		@include body-level-6;
+	}
+
+}
+
+.np-headings
+{
+	h1, h2, h3, h4, h5, h6
+	{
+		margin-bottom: 0 !important;
+	}
+}
+
+.subtitle
+{
+
+	&.elementor-widget:not(:last-child)
+	{
+		margin-bottom: 0px;
+	}
+
+	h1, h2, h3, h4, h5, h6
+	{
+
+		@include heading-level-2;
+		color: var(--site-global-color-accent);
+		font-weight: 400 !important;
+
+		@include r(lg)
+		{
+			@include body-level-5;
+		}
+
+	}
+
+}
+
+p,
+.elementor-text-editor,
+.elementor-widget-text-editor {
+
+	letter-spacing: 0;
+	padding-bottom: 0;
+	margin-bottom: 40px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	h1, h2, h3, h4, h5, h6
+	{
+
+		font-family: var(--site-global-font-headings);
+		@include heading-level-1;
+		color: var(--site-global-color-secondary);
+
+		@include r(sm)
+		{
+			@include body-level-5;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+	strong {
+		font-weight: normal;
+	}
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ul,
+ol {
+
+	margin: 0 0 40px 20px;
+
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+
+	li {
+		letter-spacing: 0;
+	}
+
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 20px;
+}
+
+a {
+
+	font-family: var(--site-global-font-primary);
+	font-weight: 400;
+	text-decoration: none !important;
+	outline: none !important;
+	letter-spacing: 0;
+	color: var(--site-global-color-links);
+
+	&:hover, &:focus
+	{
+		color: var(--site-global-color-links-hover);
+	}
+
+}
+
+blockquote {
+	padding: 20px;
+	margin-bottom: 40px;
+
+	p {
+		font-style: italic;
+		margin: 0;
+	}
+}
+
+address
+{
+	margin-bottom: 0;
+}

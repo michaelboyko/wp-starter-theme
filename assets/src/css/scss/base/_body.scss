@@ -1,0 +1,22 @@
+// Elements - Body
+//--------------------------------------------//
+
+body,
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	overscroll-behavior: none;
+	background-color: var(--site-global-color-page-background);
+}
+
+.ast-plain-container, .ast-page-builder-template
+{
+	background-color: var(--site-global-color-page-background);
+	color: var(--site-global-color-text);
+}
+
+::-moz-selection { background: var(--site-global-color-text-highlight); color: #FFF; }
+::selection { background: var(--site-global-color-text-highlight); color: #FFF; }

@@ -1,0 +1,34 @@
+// Elements - Scrollbars
+//--------------------------------------------//
+
+html {
+    scrollbar-color: var(--site-global-color-scrollbars) #e4e4e4;
+}
+
+body {
+    scrollbar-color: var(--site-global-color-scrollbars) #e4e4e4;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e4e4e4;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--site-global-color-scrollbars);
+    border-left: 1px #e4e4e4 solid;
+    border-right: 1px #e4e4e4 solid;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement
+{
+    background: url('assets/dist/images/bg-scrollbar-btn-up.png') center center no-repeat #e4e4e4;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment
+{
+    background: url('assets/dist/images/bg-scrollbar-btn-down.png') center center no-repeat #e4e4e4;
+}

@@ -1,0 +1,48 @@
+<?php
+/**
+ * The template for displaying all single posts.
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+get_header(); ?>
+
+	<div id="primary" <?php astra_primary_class(); ?>>
+
+	<section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default"  data-aos="fade-up">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="article-header">
+				<h1 class="entry-title"><?php echo get_the_title(); ?></h1>
+				<div class="share-article"><?php echo do_shortcode('[addtoany]'); ?></div>
+			</div>
+			<?php 
+				if ( has_post_thumbnail() ) {
+					echo '<div class="featured-image" style="background-image: url(' . get_the_post_thumbnail_url(get_the_ID(),'blog-full-size') . ');"></div>';
+				} // if
+			?>
+			<div class="entry-content">
+				<?php the_content(); ?>
+			</div>
+		</article>
+	</section>
+	<div class="blog-bottom-nav">
+		<div class="container">
+			<nav id="nav-below" class="navigation" role="navigation">
+				<?php
+					$prev = get_adjacent_post(true, '', true);
+					$next = get_adjacent_post(true, '', false);
+				?>
+				<div class="nav-next"><?php if ($next) { ?><a href="<?php echo get_permalink($next->ID); ?>" class="btn-blog"><?php _e('Next Post', 'custom_theme'); ?></a><?php } // if ?></div>
+				<div class="nav-previous"><?php if ($prev) { ?><a href="<?php echo get_permalink($prev->ID); ?>" class="btn-blog"><?php _e('Previous Post', 'custom_theme'); ?></a><?php } // if ?></div>
+			</nav>
+			<div class="share-article bottom">
+				<?php echo do_shortcode('[addtoany]'); ?>
+			</div>
+		</div>
+	</div>
+
+	</div><!-- #primary -->
+
+<?php get_footer(); ?>

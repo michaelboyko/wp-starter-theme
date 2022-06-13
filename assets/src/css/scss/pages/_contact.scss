@@ -1,0 +1,111 @@
+// Pages - Contact
+//--------------------------------------------//
+
+.contact-template
+{
+
+    > .elementor-container
+    {
+
+        display: grid;
+        grid-template-columns: 500px max-content;
+        justify-content: space-between;
+        grid-gap: 40px;
+
+        @include r(xl)
+        {
+            grid-template-columns: 500px auto;
+        }
+
+        @include r(lg)
+        {
+            grid-template-columns: 1fr;
+            grid-gap: 80px;
+        }
+
+        .elementor-column
+        {
+            width: 100%;
+        }
+
+        .cards
+        {
+
+            max-width: 500px;
+
+            @include r(lg)
+            {
+                max-width: none;
+            }
+
+            .elementor-widget-image
+            {
+                img
+                {
+                    width: 100%;
+                }
+            }
+
+            address
+            {
+
+                padding: 0 40px 40px 40px;
+
+                @include r(sm)
+                {
+                    padding: 0 20px 40px 20px;
+                }
+
+                .address_item
+                {
+
+                    display: grid;
+                    grid-template-columns: max-content auto;
+                    grid-gap: 8px;
+
+                    .address_col
+                    {
+
+                        max-width: 260px;
+
+                        @include r(lg)
+                        {
+                            max-width: none;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .contact-form
+        {
+
+            max-width: 600px;
+
+            @include r(lg)
+            {
+                max-width: none;
+            }
+
+            .frm_submit
+            {
+                @include r(lg)
+                {
+                    margin-left: auto;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.page-id-23 .site-footer-section-2 .elementor-widget-button
+{
+    display: none !important;
+}

@@ -1,0 +1,65 @@
+// Pages - Standard Page
+//--------------------------------------------//
+
+#main
+{
+
+	margin-top: 40px;
+
+	@include r(lg)
+	{
+		margin-top: 0;
+	}
+
+}
+
+*:focus {
+	outline: none;
+}
+
+.elementor-top-section.elementor-section-boxed {
+
+	padding: 150px 0;
+
+	@include r(lg)
+	{
+		padding: 80px 0;
+	}
+
+	> .elementor-container {
+
+		padding: 0 20px;
+		width: 100%;
+		max-width: var(--site-global-layout-width-main);
+
+		@include r(lg)
+		{
+			max-width: 768px;
+		}
+
+		.elementor-col-100 .elementor-widget-wrap
+		{
+			padding: 0;
+		}
+
+		.elementor-container {
+			padding: 0;
+		}
+	}
+}
+
+.elementor-widget:not(:last-child)
+{
+	margin-bottom: 40px;
+}
+
+.elementor-column-gap-default
+{
+	> .elementor-column
+	{
+		> .elementor-element-populated
+		{
+			padding: 0;
+		}
+	}
+}
