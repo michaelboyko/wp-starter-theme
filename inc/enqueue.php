@@ -30,10 +30,16 @@ if ( ! function_exists( 'site_scripts' ) ) :
     wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/custom.min.js', array('jquery'), ASTRA_CHILD_THEME_VERSION, true);
 
     // Google Fonts
-    wp_enqueue_style( 'site-google-fonts', 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap', false );
+    //wp_enqueue_style( 'site-google-fonts', 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap', false );
 
   }
 
   add_action( 'wp_enqueue_scripts', 'site_scripts', 15 );
   add_action( 'login_enqueue_scripts', 'site_scripts', 10 );
 endif;
+
+function google_fonts() {
+  echo '<link rel="stylesheet" id="site-google-fonts-css"  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" media="all" />';
+}
+
+add_action( 'wp_head', 'google_fonts', 1 );
