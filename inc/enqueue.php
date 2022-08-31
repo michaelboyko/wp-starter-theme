@@ -42,4 +42,5 @@ function google_fonts() {
   echo '<link rel="stylesheet" id="site-google-fonts-css"  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" media="all" />';
 }
 
+add_action('login_head', 'google_fonts');
 add_action( 'wp_head', 'google_fonts', 1 );
