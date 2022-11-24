@@ -6,52 +6,37 @@
  * @since 1.0.0
  */
 
- // Exit if accessed directly
+// Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * ACF
- */
+// ACF
 require_once( 'inc/acf.php');
 
-/**
- * Astra Hooks
- */
+// Astra Hooks
 require_once( 'inc/astra.php');
 
-/**
- * Add Google Analytics
- */
+// Add Google Analytics
 require_once( 'inc/google-analytics.php');
 
-/**
- * Add Header Scripts
- */
+// Add Header Scripts
 require_once( 'inc/header-scripts.php');
 
-/**
- * Enqueue scripts and styles
- */
+// Enqueue scripts and styles
 require_once( 'inc/enqueue.php');
 
-/**
- * Elementor changes
- */
+// Elementor changes
 require_once( 'inc/elementor.php');
 
-/**
- * Custom image sizes
- */
+// Custom image sizes
 require_once( 'inc/custom-image-sizes.php');
 
-/**
- * Shortcodes
- */
+// Shortcodes
 require_once( 'inc/shortcodes.php');
 
-/**
- * Custom login page
- */
+// Custom login page
 require_once( 'inc/login.php');
+
+// Required Plugins
+require_once( '/inc/tgmpa.php' );

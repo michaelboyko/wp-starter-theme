@@ -12,20 +12,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 
-// Dynamically get version number of the parent stylesheet (lets browsers re-cache your stylesheet when you update your theme)
-$theme = wp_get_theme();
-$version = $theme->get('Version');
-
-
 if ( ! function_exists( 'site_scripts' ) ) :
   function site_scripts() {
 
+    // Dynamically get version number of the parent stylesheet (lets browsers re-cache your stylesheet when you update your theme)
+    $theme = wp_get_theme();
+    $version = $theme->get('Version');
+
     // Animations
-    wp_enqueue_script( 'aos-js', get_stylesheet_directory_uri() . '/assets/dist/js/aos.js', array(), '2.3.4', true );
-    wp_enqueue_style( 'aos-css', get_stylesheet_directory_uri() . '/assets/dist/css/aos.css', array(),'2.3.4', 'all');
+    wp_enqueue_script( 'aos', get_stylesheet_directory_uri() . '/assets/dist/js/aos.js', array(), '2.3.4', true );
+    wp_enqueue_style( 'aos', get_stylesheet_directory_uri() . '/assets/dist/css/aos.css', array(),'2.3.4', 'all');
 
     // Theme Scripts
-    wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() . '/style.min.css', array('astra-theme-css'), $version, 'all' );
+    wp_enqueue_style( 'child-theme', get_stylesheet_directory_uri() . '/style.min.css', array('astra-theme-css'), $version, 'all' );
     wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/assets/dist/js/custom.min.js', array('jquery'), $version, true);
 
     // Google Fonts
