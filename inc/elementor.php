@@ -32,6 +32,8 @@ function js_dequeue_eicons() {
 add_filter('get_edit_post_link', 'fd_make_elementor_default_edit_link', 10, 3 );
 function fd_make_elementor_default_edit_link($link, $post_id, $context) {
 
+  if ( is_admin() ) { 
+
     $screen = get_current_screen();
     if( !is_object($screen) )
         return;
@@ -49,6 +51,8 @@ function fd_make_elementor_default_edit_link($link, $post_id, $context) {
     } else {
         return $link;
     } // if
+
+  } // if
 
 }
 
