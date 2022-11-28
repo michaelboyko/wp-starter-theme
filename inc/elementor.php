@@ -27,3 +27,55 @@ function js_dequeue_eicons() {
   }
   wp_dequeue_style( 'elementor-icons' );
 }
+
+// Make Elementor Default Editor
+add_filter('get_edit_post_link', 'fd_make_elementor_default_edit_link', 10, 3 );
+function fd_make_elementor_default_edit_link($link, $post_id, $context) {
+
+    $screen = get_current_screen();
+    if( !is_object($screen) )
+        return;
+
+    $post_types_for_elementor = array(
+        'page',
+        //'post',
+        'e-landing-page',
+        'elementor_library',
+    );
+
+    if ( in_array( $screen->post_type, $post_types_for_elementor ) && $context == 'display' ) {
+        $elementor_editor_link = admin_url( 'post.php?post=' . $post_id . '&action=elementor' );
+        return $elementor_editor_link;
+    } else {
+        return $link;
+    } // if
+
+}
+
+// Add back the default edit link in page and post list rows
+add_filter( 'page_row_actions', 'fd_add_back_default_edit_link', 10, 2 );
+//add_filter( 'post_row_actions', 'fd_add_back_default_edit_link', 10, 2 );
+function fd_add_back_default_edit_link( $actions, $post ) {
+
+  $elementor_edit_url = admin_url( 'post.php?post=' . $post->ID . '&action=edit' );
+
+  $actions['edit'] =
+      sprintf( '<a href="%1$s">%2$s</a>',
+          esc_url( $elementor_edit_url ),
+          esc_html( __( 'Default WordPress Editor', 'elementor' ) )
+      );
+
+  return $actions;
+
+}
+
+
+// Remove "Edit with Elementor" link
+add_filter( 'page_row_actions', 'fd_remove_default_edit_with_elementor', 99, 2 );
+add_filter( 'post_row_actions', 'fd_remove_default_edit_with_elementor', 99, 2 );
+function fd_remove_default_edit_with_elementor( $actions, $post ) {
+
+  unset( $actions['edit_with_elementor'] );
+  return $actions;
+
+}
