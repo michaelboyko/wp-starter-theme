@@ -69,7 +69,6 @@ function fd_add_back_default_edit_link( $actions, $post ) {
 
 }
 
-
 // Remove "Edit with Elementor" link
 add_filter( 'page_row_actions', 'fd_remove_default_edit_with_elementor', 99, 2 );
 add_filter( 'post_row_actions', 'fd_remove_default_edit_with_elementor', 99, 2 );
