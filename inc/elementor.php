@@ -63,11 +63,13 @@ function cm2_add_back_default_edit_link( $actions, $post ) {
 
   $elementor_edit_url = admin_url( 'post.php?post=' . $post->ID . '&action=edit' );
 
-  $actions['edit'] =
-      sprintf( '<a href="%1$s">%2$s</a>',
-          esc_url( $elementor_edit_url ),
-          esc_html( __( 'Default WordPress Editor', 'elementor' ) )
-      );
+  if ( get_post_meta( $post->ID, '_elementor_edit_mode', true ) == 'builder' ) {
+    $actions['edit'] =
+        sprintf( '<a href="%1$s">%2$s</a>',
+            esc_url( $elementor_edit_url ),
+            esc_html( __( 'Default WordPress Editor', 'elementor' ) )
+        );
+  } // if
 
   return $actions;
 
@@ -78,7 +80,9 @@ add_filter( 'page_row_actions', 'cm2_remove_default_edit_with_elementor', 99, 2 
 add_filter( 'post_row_actions', 'cm2_remove_default_edit_with_elementor', 99, 2 );
 function cm2_remove_default_edit_with_elementor( $actions, $post ) {
 
-  unset( $actions['edit_with_elementor'] );
+  if ( get_post_meta( $post->ID, '_elementor_edit_mode', true ) == 'builder' ) {
+    unset( $actions['edit_with_elementor'] );
+  } // if
   return $actions;
 
 }
