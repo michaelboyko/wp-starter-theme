@@ -29,8 +29,8 @@ function js_dequeue_eicons() {
 }
 
 // Make Elementor Default Editor
-add_filter('get_edit_post_link', 'fd_make_elementor_default_edit_link', 10, 3 );
-function fd_make_elementor_default_edit_link($link, $post_id, $context) {
+add_filter('get_edit_post_link', 'cm2_make_elementor_default_edit_link', 10, 3 );
+function cm2_make_elementor_default_edit_link($link, $post_id, $context) {
 
   if ( is_admin() ) { 
 
@@ -45,7 +45,7 @@ function fd_make_elementor_default_edit_link($link, $post_id, $context) {
         'elementor_library',
     );
 
-    if ( in_array( $screen->post_type, $post_types_for_elementor ) && $context == 'display' ) {
+    if ( in_array( $screen->post_type, $post_types_for_elementor ) && $context == 'display' && get_post_meta( $post_id, '_elementor_edit_mode', true ) == 'builder' ) {
         $elementor_editor_link = admin_url( 'post.php?post=' . $post_id . '&action=elementor' );
         return $elementor_editor_link;
     } else {
@@ -57,9 +57,9 @@ function fd_make_elementor_default_edit_link($link, $post_id, $context) {
 }
 
 // Add back the default edit link in page and post list rows
-add_filter( 'page_row_actions', 'fd_add_back_default_edit_link', 10, 2 );
-//add_filter( 'post_row_actions', 'fd_add_back_default_edit_link', 10, 2 );
-function fd_add_back_default_edit_link( $actions, $post ) {
+add_filter( 'page_row_actions', 'cm2_add_back_default_edit_link', 10, 2 );
+//add_filter( 'post_row_actions', 'cm2_add_back_default_edit_link', 10, 2 );
+function cm2_add_back_default_edit_link( $actions, $post ) {
 
   $elementor_edit_url = admin_url( 'post.php?post=' . $post->ID . '&action=edit' );
 
@@ -74,9 +74,9 @@ function fd_add_back_default_edit_link( $actions, $post ) {
 }
 
 // Remove "Edit with Elementor" link
-add_filter( 'page_row_actions', 'fd_remove_default_edit_with_elementor', 99, 2 );
-add_filter( 'post_row_actions', 'fd_remove_default_edit_with_elementor', 99, 2 );
-function fd_remove_default_edit_with_elementor( $actions, $post ) {
+add_filter( 'page_row_actions', 'cm2_remove_default_edit_with_elementor', 99, 2 );
+add_filter( 'post_row_actions', 'cm2_remove_default_edit_with_elementor', 99, 2 );
+function cm2_remove_default_edit_with_elementor( $actions, $post ) {
 
   unset( $actions['edit_with_elementor'] );
   return $actions;
