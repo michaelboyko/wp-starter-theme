@@ -12,12 +12,16 @@ h1, h2, h3, h4, h5, h6,
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6
 {
 	color: var(--site-global-color-text);
+	font-family: var(--site-global-font-headings) !important;
+	font-weight: 900 !important;
 }
 
 h1, h2, h3, h4, h5, h6, 
 .elementor-widget-heading .elementor-heading-title
 {
 	margin-bottom: 0;
+	font-family: var(--site-global-font-headings) !important;
+	font-weight: 900 !important;
 }
 
 .entry-content
