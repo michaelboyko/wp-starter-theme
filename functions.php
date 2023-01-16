@@ -39,4 +39,4 @@ require_once( 'inc/shortcodes.php');
 require_once( 'inc/login.php');
 
 // Required Plugins
-require_once( '/inc/tgmpa.php' );
+require_once( 'inc/tgmpa.php' );
