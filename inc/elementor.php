@@ -15,19 +15,6 @@ add_action( 'elementor/frontend/after_register_styles',function() {
 	}
 }, 20 );
 
-
-// Remove Eicons on frontend only
-add_action( 'elementor/frontend/after_enqueue_styles', 'js_dequeue_eicons' );
-
-function js_dequeue_eicons() {
-
-  // Don't remove it in the backend
-  if ( is_admin() || current_user_can( 'manage_options' ) ) {
-    return;
-  }
-  wp_dequeue_style( 'elementor-icons' );
-}
-
 // Make Elementor Default Editor
 add_filter('get_edit_post_link', 'cm2_make_elementor_default_edit_link', 10, 3 );
 function cm2_make_elementor_default_edit_link($link, $post_id, $context) {
