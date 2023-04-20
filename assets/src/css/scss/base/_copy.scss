@@ -3,36 +3,27 @@
 
 address, blockquote, body, dd, dl, dt, fieldset, figure, html, legend, li, ol, p, pre, ul
 {
-	font-family: var(--site-global-font-primary);
 	@include body-level-4;
-	font-weight: 300;
-}
-
-h1, h2, h3, h4, h5, h6,
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6
-{
-	color: var(--site-global-color-text);
-	font-family: var(--site-global-font-headings) !important;
-	font-weight: 900 !important;
 }
 
 h1, h2, h3, h4, h5, h6, 
 .elementor-widget-heading .elementor-heading-title
 {
 	margin-bottom: 0;
-	font-family: var(--site-global-font-headings) !important;
-	font-weight: 900 !important;
 }
 
 .entry-content
 {
+
 	h1, h2, h3, h4, h5, h6, p, ul, ol
 	{
 		margin-bottom: 40px;
 	}
+	
 }
 
-.entry-content h1, .entry-content h2
+.entry-content h1, .entry-content h2,
+.elementor-widget-heading h1.elementor-heading-title, .elementor-widget-heading h2.elementor-heading-title
 {
 
 	@include heading-level-6;
@@ -54,7 +45,8 @@ h1, h2, h3, h4, h5, h6,
 
 }
 
-.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6
+.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+.elementor-widget-heading h3.elementor-heading-title, .elementor-widget-heading h4.elementor-heading-title, .elementor-widget-heading h5.elementor-heading-title, .elementor-widget-heading h6.elementor-heading-title
 {
 
 	@include heading-level-4;
@@ -71,14 +63,6 @@ h1, h2, h3, h4, h5, h6,
 
 }
 
-.np-headings
-{
-	h1, h2, h3, h4, h5, h6
-	{
-		margin-bottom: 0 !important;
-	}
-}
-
 .subtitle
 {
 
@@ -91,8 +75,6 @@ h1, h2, h3, h4, h5, h6,
 	{
 
 		@include heading-level-2;
-		color: var(--site-global-color-accent);
-		font-weight: 400 !important;
 
 		@include r(lg)
 		{
@@ -105,7 +87,8 @@ h1, h2, h3, h4, h5, h6,
 
 p,
 .elementor-text-editor,
-.elementor-widget-text-editor {
+.elementor-widget-text-editor
+{
 
 	letter-spacing: 0;
 	padding-bottom: 0;
@@ -118,9 +101,7 @@ p,
 	h1, h2, h3, h4, h5, h6
 	{
 
-		font-family: var(--site-global-font-headings);
 		@include heading-level-1;
-		color: var(--site-global-color-secondary);
 
 		@include r(sm)
 		{
@@ -133,21 +114,21 @@ p,
 
 	}
 
-	strong {
-		font-weight: normal;
-	}
 }
 
-ul {
+ul
+{
 	list-style: disc;
 }
 
-ol {
+ol
+{
 	list-style: decimal;
 }
 
 ul,
-ol {
+ol
+{
 
 	margin: 0 0 40px 20px;
 
@@ -163,38 +144,41 @@ ol {
 }
 
 li > ul,
-li > ol {
+li > ol
+{
 	margin-bottom: 0;
 	margin-left: 20px;
 }
 
-a {
-
-	font-family: var(--site-global-font-primary);
-	font-weight: 400;
-	text-decoration: none !important;
+a
+{
 	outline: none !important;
 	letter-spacing: 0;
-	color: var(--site-global-color-links);
-
-	&:hover, &:focus
-	{
-		color: var(--site-global-color-links-hover);
-	}
-
 }
 
-blockquote {
+blockquote
+{
+
 	padding: 20px;
 	margin-bottom: 40px;
 
-	p {
+	p
+	{
 		font-style: italic;
 		margin: 0;
 	}
+
 }
 
 address
 {
 	margin-bottom: 0;
+}
+
+hr
+{
+	background-color: #EEE;
+	border: 0;
+	height: 1px;
+	margin-bottom: 40px;
 }

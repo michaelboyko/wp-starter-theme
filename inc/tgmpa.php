@@ -144,6 +144,12 @@ $plugins = array(
         'required'              => true, // If false, the plugin is only 'recommended' instead of required
     ),
     array(
+        'name'                  => 'WP Code', // The plugin name
+        'slug'                  => 'insert-headers-and-footers', // The plugin slug (typically the folder name)
+        'version'               => '2.0.10',
+        'required'              => true, // If false, the plugin is only 'recommended' instead of required
+    ),
+    array(
         'name'                  => 'WP Mail SMTP', // The plugin name
         'slug'                  => 'wp-mail-smtp', // The plugin slug (typically the folder name)
         'version'               => '3.6.1',

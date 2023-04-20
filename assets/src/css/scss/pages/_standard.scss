@@ -1,23 +1,13 @@
 // Pages - Standard Page
 //--------------------------------------------//
 
-#main
+*:focus
 {
-
-	margin-top: 40px;
-
-	@include r(lg)
-	{
-		margin-top: 0;
-	}
-
-}
-
-*:focus {
 	outline: none;
 }
 
-.elementor-top-section.elementor-section-boxed {
+.elementor-top-section.elementor-section-boxed
+{
 
 	padding: 150px 0;
 
@@ -26,11 +16,12 @@
 		padding: 80px 0;
 	}
 
-	> .elementor-container {
+	> .elementor-container
+	{
 
 		padding: 0 20px;
 		width: 100%;
-		max-width: var(--site-global-layout-width-main);
+		max-width: var(--wp--custom--ast-content-width-size);
 
 		@include r(lg)
 		{
@@ -42,10 +33,13 @@
 			padding: 0;
 		}
 
-		.elementor-container {
+		.elementor-container
+		{
 			padding: 0;
 		}
+
 	}
+
 }
 
 .elementor-widget:not(:last-child)
@@ -55,11 +49,15 @@
 
 .elementor-column-gap-default
 {
+
 	> .elementor-column
 	{
+
 		> .elementor-element-populated
 		{
 			padding: 0;
 		}
+
 	}
+
 }

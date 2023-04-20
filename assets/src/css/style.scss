@@ -25,16 +25,12 @@ Tags: scss, gulp, wordpress, theme
 @import "scss/base/accessibility";
 @import "scss/base/alignments";
 @import "scss/base/animations";
-@import "scss/base/font-face";
 @import "scss/base/body";
 @import "scss/base/scrollbars";
 @import "scss/base/copy";
 @import "scss/base/buttons";
 @import "scss/base/forms";
-@import "scss/base/hr";
 @import "scss/base/media";
-
-// Sections
 
 // Layouts
 @import "scss/layout/header";
@@ -42,8 +38,7 @@ Tags: scss, gulp, wordpress, theme
 
 // Pages
 @import "scss/pages/standard";
-@import "scss/pages/single";
-@import "scss/pages/home";
 @import "scss/pages/blog";
-@import "scss/pages/contact";
-@import "scss/pages/404";
+@import "scss/pages/single";
+
+// Components

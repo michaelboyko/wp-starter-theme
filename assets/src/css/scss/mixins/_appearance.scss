@@ -37,25 +37,6 @@
 	border-radius: $radius;
 }
 
-// Placeholder
-@mixin placeholder {
-	::-webkit-input-placeholder {
-		@content;
-	}
-
-	:-moz-placeholder {
-		@content;
-	}
-
-	::-moz-placeholder {
-		@content;
-	}
-
-	:-ms-input-placeholder {
-		@content;
-	}
-}
-
 // Cross browser opacity
 // @include opacity(0.8);
 

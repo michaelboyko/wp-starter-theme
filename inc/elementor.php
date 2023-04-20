@@ -43,7 +43,7 @@ function cm2_make_elementor_default_edit_link($link, $post_id, $context) {
 
 }
 
-// Add back the default edit link in page and post list rows
+// Add Back Default Edit Link In Page/Post List Rows
 add_filter( 'page_row_actions', 'cm2_add_back_default_edit_link', 10, 2 );
 //add_filter( 'post_row_actions', 'cm2_add_back_default_edit_link', 10, 2 );
 function cm2_add_back_default_edit_link( $actions, $post ) {
@@ -62,7 +62,7 @@ function cm2_add_back_default_edit_link( $actions, $post ) {
 
 }
 
-// Remove "Edit with Elementor" link
+// Remove "Edit with Elementor" Link
 add_filter( 'page_row_actions', 'cm2_remove_default_edit_with_elementor', 99, 2 );
 add_filter( 'post_row_actions', 'cm2_remove_default_edit_with_elementor', 99, 2 );
 function cm2_remove_default_edit_with_elementor( $actions, $post ) {

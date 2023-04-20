@@ -6,6 +6,7 @@
             "key": "field_620524b60cbbb",
             "label": "Address",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_620523d72ee7a",
             "label": "Address",
             "name": "address",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,6 +43,7 @@
             "key": "field_6205240f27166",
             "label": "Address 2",
             "name": "address_2",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -60,6 +63,7 @@
             "key": "field_6205247b739e6",
             "label": "City",
             "name": "city",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -79,6 +83,7 @@
             "key": "field_6205248d02d1b",
             "label": "Province",
             "name": "province",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -98,6 +103,7 @@
             "key": "field_620524a110389",
             "label": "Postal",
             "name": "postal",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -117,6 +123,7 @@
             "key": "field_620524c20cbbc",
             "label": "Contact Info",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -133,6 +140,7 @@
             "key": "field_62052507070b1",
             "label": "Email",
             "name": "email",
+            "aria-label": "",
             "type": "email",
             "instructions": "",
             "required": 0,
@@ -151,6 +159,7 @@
             "key": "field_6205251a070b2",
             "label": "Phone",
             "name": "phone",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -165,94 +174,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_6245e69b60a99",
-            "label": "Hours",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6245e6ab47afc",
-            "label": "Hours",
-            "name": "hours",
-            "type": "repeater",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 1,
-            "max": 0,
-            "layout": "block",
-            "button_label": "Add Hour Grouping",
-            "sub_fields": [
-                {
-                    "key": "field_6245e6d247afd",
-                    "label": "Days",
-                    "name": "days",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6245e6e9ff12f",
-                    "label": "Start Time",
-                    "name": "start_time",
-                    "type": "time_picker",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "g:i a",
-                    "return_format": "g:i a"
-                },
-                {
-                    "key": "field_6245e704ff130",
-                    "label": "End Time",
-                    "name": "end_time",
-                    "type": "time_picker",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "g:i a",
-                    "return_format": "g:i a"
-                }
-            ]
         }
     ],
     "location": [
@@ -273,5 +194,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649964534
+    "modified": 1681917030
 }

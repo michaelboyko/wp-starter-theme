@@ -1,20 +1,6 @@
 // Font Mixins
 //--------------------------------------------//
 
-// Font Face
-// @include font-face(Roboto, "./assets/Roboto", 400, normal);
-
-@mixin font-face($font-name, $path, $weight: 400, $style: normal) {
-	@font-face {
-		font-family: quote($font-name);
-		font-style: $style;
-		font-weight: $weight;
-		font-display: swap;
-		src: url($path + ".woff2?v=3.15") format("woff2"),
-			url($path + ".woff?v=3.15") format("woff");
-	}
-}
-
 // Function for converting a px based font-size to rem
 // @include font-rem(16px, 24px);
 

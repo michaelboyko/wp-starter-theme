@@ -24,17 +24,6 @@ function astra_builder_elements_count( $elements ) {
 }
 add_filter( 'astra_builder_elements_count', 'astra_builder_elements_count', 10 );
 
-// Blog Title
-add_action( 'astra_entry_top','astra_single_post_title' );
-function astra_single_post_title () {
-    if (in_category('blog') && is_single()) {
-        echo '<div class="blog-title">';
-        echo '<div class="subtitle elementor-widget"><p>Blog post</p></div>';
-        echo '<h1>' . get_the_title() . '</h1>';
-        echo '</div>';
-    } // if
-}
-
 // Breakpoints
 add_filter( 'astra_tablet_breakpoint', function() {
     return 1000;

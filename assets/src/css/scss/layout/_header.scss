@@ -1,11 +1,35 @@
 // Layouts - Header
 //--------------------------------------------//
 
-// Header Container
+// General
 
 .ast-container
 {
-    max-width: var(--site-global-layout-width-header);
+    max-width: var(--wp--custom--ast-content-width-size);
+}
+
+#wpadminbar
+{
+    z-index: 999999;
+}
+
+// Sticky Header Menu
+
+#ast-fixed-header .main-header-bar
+{
+    background-color: var(--ast-global-color-1);
+    @include box-shadow(0px 0px 10px rgba(0,0,0,0.15));
+    padding: 0;
+}
+
+[CLASS*="-sticky-header-active"] .ast-header-sticked [data-section="section-header-mobile-trigger"] .ast-button-wrap
+{
+
+    .mobile-menu-toggle-icon
+    {
+        background-color: var(--ast-global-color-2);
+    }
+
 }
 
 // Above Header
@@ -13,9 +37,8 @@
 .ast-above-header.ast-above-header-bar
 {
 
-    background-color: var(--site-global-color-primary) !important;
+    background-color: var(--ast-global-color-1) !important;
     border: 0;
-    color: var(--site-global-color-text);
 
     @include r(lg)
     {
@@ -24,13 +47,12 @@
 
     a
     {
-        color: var(--site-global-color-text);
-        font-weight: 400;
+        color: var(--ast-global-color-0);
     }
 
     a:hover
     {
-        color: var(--site-global-color-accent);
+        color: var(--ast-global-color-1);
     }
 
     .site-header-section > *
@@ -54,13 +76,12 @@
         p
         {
             @include font-rem(14px, 20px);
-            font-weight: 400;
         }
 
         svg
         {
 
-            fill: var(--site-global-color-text);
+            fill: var(--ast-global-color-0);
             width: 20px;
             height: 20px;
 
@@ -72,6 +93,7 @@
 
         }
 
+        // Above Header Contact Icons
         .address-item
         {
             
@@ -90,6 +112,8 @@
         }
 
     }
+
+    // Above Header Social Icons
 
     .ast-builder-social-element
     {
@@ -110,7 +134,7 @@
         svg
         {
 
-            fill: var(--site-global-color-links);
+            fill: var(--ast-global-color-0);
             width: 20px;
             height: 20px;
             transition: fill 0.5s ease;
@@ -123,7 +147,7 @@
 
             &:hover
             {
-                fill: var(--site-global-color-links-hover);
+                fill: var(--ast-global-color-1);
             }
 
         }
@@ -193,7 +217,6 @@
 
 .ast-primary-header-bar
 {
-    color: var(--site-global-color-text);
     padding: 15px 0;
     border: 0 !important;
 }
@@ -256,8 +279,6 @@
     .main-navigation
     {
 
-        font-family: var(--site-global-font-primary);
-
         .menu-item
         {
 
@@ -273,7 +294,7 @@
 
                     @include r(lg)
                     {
-                        padding-right: 22px;
+                        padding-right: 20px;
                     }
 
                 }
@@ -283,8 +304,8 @@
             .menu-link
             {
 
-                color: var(--site-global-color-text);
-                padding: 0 22px;
+                color: var(--ast-global-color-0);
+                padding: 0 20px;
                 @include body-level-4;
 
             }
@@ -294,7 +315,7 @@
 
                 .menu-link
                 {
-                    color: var(--site-global-color-accent);
+                    color: var(--ast-global-color-1);
                 }
 
             }
@@ -316,7 +337,7 @@
 
                 .menu-link
                 {
-                    color: var(--site-global-color-text);
+                    color: var(--ast-global-color-0);
                     padding: 10px 20px;
                 }
 
@@ -325,7 +346,7 @@
 
                     .menu-link
                     {
-                        color: var(--site-global-color-accent);
+                        color: var(--ast-global-color-1);
                     }
 
                 }
@@ -338,16 +359,7 @@
 
 }
 
-// Sticky Header Menu
-
-#ast-fixed-header .main-header-bar
-{
-    background-color: var(--site-global-color-primary);
-    @include box-shadow(0px 0px 10px rgba(0,0,0,0.15));
-    padding: 0;
-}
-
-// Header Mobile Navigation
+// Header Mobile Menu
 
 .ast-popup-nav-open, .ast-main-header-nav-open
 {
@@ -365,7 +377,7 @@
 
     display: grid !important;
     grid-template-rows: max-content auto;
-    background-color: var(--site-global-color-primary) !important;
+    background-color: var(--ast-global-color-1) !important;
 
     .ast-mobile-popup-content
     {
@@ -381,6 +393,93 @@
     overflow-y: auto;
 
 }
+
+.ast-mobile-popup-drawer .ast-mobile-popup-overlay
+{
+    background-color: var(--ast-global-color-1);
+}
+
+// Mobile Toggle Button
+
+[data-section="section-header-mobile-trigger"] .ast-button-wrap, 
+[CLASS*="-sticky-header-active"] .ast-header-sticked [data-section="section-header-mobile-trigger"] .ast-button-wrap
+{
+
+    button
+    {
+        padding: 0 !important;
+        outline: none !important;
+    }
+
+    .mobile-menu-toggle-icon
+    {
+
+        background-color: var(--ast-global-color-1);
+        @include border-radius(50%);
+        padding: 10px;
+
+        &:hover
+        {
+
+            .ast-mobile-svg
+            {
+                fill: var(--ast-global-color-0);
+            } 
+
+        }
+
+        .ast-mobile-svg
+        {
+
+            transition: fill 0.5s ease;
+            fill: var(--ast-global-color-1);
+            width: 30px;
+            height: 30px;
+
+        }
+
+    }
+
+}
+
+// Max Size For Mobile Divs To Fix Shift On Menu Open
+
+#masthead .ast-mobile-header-wrap .ast-primary-header-bar div
+{
+    max-height: 100px;
+}
+
+// Mobile Menu Close
+
+.ast-mobile-popup-drawer .menu-toggle-close
+{
+
+    @include r(lg)
+    {
+        margin-left: auto;
+    }
+
+    svg
+    {
+        fill: var(--ast-global-color-1);
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+#menu-toggle-close
+{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.ast-builder-menu-mobile .main-navigation .menu-item .ast-menu-toggle svg
+{
+    margin-bottom: 8px !important;
+}
+
+// Header Mobile Navigation
 
 .ast-builder-menu-mobile
 {
@@ -399,11 +498,11 @@
 
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px var(--site-global-color-dark-border) solid;
+            border-bottom: 1px #999 solid;
 
             .menu-link
             {
-                color: var(--site-global-color-text);
+                color: var(--ast-global-color-0);
                 @include heading-level-1;
                 font-weight: 300;
             }
@@ -413,12 +512,12 @@
 
                 .menu-link
                 {
-                    color: var(--site-global-color-accent);
+                    color: var(--ast-global-color-1);
                 }
 
                 .ast-menu-toggle svg
                 {
-                    color: var(--site-global-color-text);
+                    color: var(--ast-global-color-0);
                 }
 
             }
@@ -443,7 +542,7 @@
                 svg
                 {
                     transition: all 0.5s ease;
-                    color: var(--site-global-color-text);
+                    color: var(--ast-global-color-0);
                     margin-top: 15px;
                 }
 
@@ -465,7 +564,7 @@
 
                 .menu-link
                 {
-                    color: var(--site-global-color-text);
+                    color: var(--ast-global-color-0);
                     @include body-level-5;
                     padding-top: 0;
                     padding-bottom: 0;
@@ -476,7 +575,7 @@
 
                     .menu-link
                     {
-                        color: var(--site-global-color-accent);
+                        color: var(--ast-global-color-1);
                     }
 
                 }
@@ -492,102 +591,4 @@
 
     }
 
-}
-
-.ast-mobile-popup-drawer .ast-mobile-popup-overlay
-{
-    background-color: var(--site-global-color-primary);
-}
-
-// Mobile Toggle Button
-
-[data-section="section-header-mobile-trigger"] .ast-button-wrap, 
-[CLASS*="-sticky-header-active"] .ast-header-sticked [data-section="section-header-mobile-trigger"] .ast-button-wrap
-{
-
-    button
-    {
-        padding: 0 !important;
-        outline: none !important;
-    }
-
-    .mobile-menu-toggle-icon
-    {
-
-        background-color: var(--site-global-color-primary);
-        @include border-radius(50%);
-        padding: 10px;
-
-        &:hover
-        {
-
-            .ast-mobile-svg
-            {
-                fill: var(--site-global-color-accent);
-            } 
-
-        }
-
-        .ast-mobile-svg
-        {
-
-            transition: fill 0.5s ease;
-            fill: var(--site-global-color-text);
-            width: 30px;
-            height: 30px;
-
-        }
-
-    }
-
-}
-
-[CLASS*="-sticky-header-active"] .ast-header-sticked [data-section="section-header-mobile-trigger"] .ast-button-wrap
-{
-
-    .mobile-menu-toggle-icon
-    {
-        background-color: var(--site-global-color-secondary);
-    }
-
-}
-
-// Max Size For Mobile Divs To Fix Shift On Menu Open
-
-#masthead .ast-mobile-header-wrap .ast-primary-header-bar div
-{
-    max-height: 100px;
-}
-
-.ast-mobile-popup-drawer .menu-toggle-close
-{
-
-    @include r(lg)
-    {
-        margin-left: auto;
-    }
-
-    svg
-    {
-        fill: var(--site-global-color-text);
-        width: 40px;
-        height: 40px;
-    }
-
-}
-
-#menu-toggle-close
-{
-    margin-top: 20px;
-    margin-right: 10px;
-}
-
-.ast-builder-menu-mobile .main-navigation .menu-item .ast-menu-toggle svg
-{
-    margin-bottom: 8px !important;
-}
-
-#wpadminbar
-{
-    z-index: 999999;
 }

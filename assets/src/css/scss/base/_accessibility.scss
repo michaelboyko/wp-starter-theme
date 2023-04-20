@@ -1,7 +1,7 @@
 // Utilities - Accessibility
 //--------------------------------------------//
 
-/* Text meant only for screen readers. */
+// Text meant only for screen readers
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -12,7 +12,7 @@
 	padding: 0;
 	position: absolute !important;
 	width: 1px;
-	word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
+	word-wrap: normal !important;
 
 	&:focus {
 		background-color: #000;
@@ -31,11 +31,10 @@
 		text-decoration: none;
 		top: 5px;
 		width: auto;
-		z-index: 100000; // Above WP toolbar.
+		z-index: 100000;
 	}
 }
 
-/* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
 	outline: 0;
 }

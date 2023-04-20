@@ -2,7 +2,7 @@
 /**
  * Preload Featured Image
  *
- * @package CWOF
+ * @package WP Gulp Child Theme
  */
 
 function preload_featured_image(){

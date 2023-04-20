@@ -5,22 +5,6 @@
  * @package WP Gulp Child Theme
  */
 
-// Newsletter Signup Shortcode
-function get_newsletter_signup_shortcode( $atts ) {
-
-    $output = '<div class="newsletter-signup shortcode">
-        <form class="mc-embedded-subscribe-form validate" action="https://cm2media.us14.list-manage.com/subscribe/post?u=REAL_ID"" method="post" name="mc-embedded-subscribe-form" target="_blank">
-        <fieldset>
-        <div class="newsletter-fields"><label>Email Address*</label><input class="email" name="EMAIL" required="" type="email" value="" /> <button class="button elementor-size-xl" name="subscribe" type="submit"><span class="newsletter-icon-right"><span>Sign Up</span></span></button></div></fieldset>
-        <div class="company" style="position: absolute; left: -5000px;" aria-hidden="true"><input tabindex="-1" name="REAL_ID" type="text" value="" /></div>
-        </form>
-    </div>';
-	return $output;
-
-}
-
-add_shortcode( 'newsletter_signup', 'get_newsletter_signup_shortcode' );
-
 // Contact Info Shortcode
 function get_contact_info_shortcode( $atts ) {
 
@@ -101,26 +85,3 @@ function get_svg_shortcode( $atts ) {
 }
 
 add_shortcode( 'svg', 'get_svg_shortcode' );
-
-// Elementor Button Shortcode
-function get_elementor_button_shortcode( $atts ) {
-
-    $output = '';
-
-    if ($atts && $atts['label'] && $atts['link']) {
-        $output .= '<div class="elementor-element elementor-widget elementor-widget-button">';
-        $output .= '<div class="elementor-widget-container">';
-        $output .= '<div class="elementor-button-wrapper">';
-        $output .= '<a href="' . $atts['link'] . '" class="elementor-button-link elementor-button elementor-size-xl" role="button">';
-        $output .= '<span class="elementor-button-text">' . $atts['label'] . '</span>';
-        $output .= '</a>';
-        $output .= '</div>';
-        $output .= '</div>';
-        $output .= '</div>';
-    } // if
-
-    return $output;
-
-}
-
-add_shortcode( 'button', 'get_elementor_button_shortcode' );

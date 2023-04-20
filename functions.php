@@ -20,8 +20,8 @@ require_once( 'inc/astra.php');
 // Add Google Analytics
 require_once( 'inc/google-analytics.php');
 
-// Add Header Scripts
-require_once( 'inc/header-scripts.php');
+// Auto NoIndex Dev Sites
+require_once( 'inc/auto-noindex-dev-sites.php');
 
 // Enqueue scripts and styles
 require_once( 'inc/enqueue.php');
