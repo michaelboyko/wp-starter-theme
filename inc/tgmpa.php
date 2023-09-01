@@ -124,6 +124,12 @@ $plugins = array(
         'required'              => true, // If false, the plugin is only 'recommended' instead of required
     ),
     array(
+        'name'                  => 'LoginPress | wp-login Custom Login Page Customizer', // The plugin name
+        'slug'                  => 'loginpress', // The plugin slug (typically the folder name)
+        'version'               => '1.8.0',
+        'required'              => true, // If false, the plugin is only 'recommended' instead of required
+    ),
+    array(
         'name'                  => 'Ultimate Addons for Elementor', // The plugin name
         'slug'                  => 'ultimate-elementor', // The plugin slug (typically the folder name)
         'source'                => get_stylesheet_directory() . '/required-plugins/ultimate-elementor-1.36.4.zip', // The plugin source

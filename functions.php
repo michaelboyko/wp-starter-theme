@@ -35,8 +35,5 @@ require_once( 'inc/custom-image-sizes.php');
 // Shortcodes
 require_once( 'inc/shortcodes.php');
 
-// Custom login page
-require_once( 'inc/login.php');
-
 // Required Plugins
 require_once( 'inc/tgmpa.php' );
