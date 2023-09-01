@@ -118,9 +118,9 @@ $plugins = array(
         'required'              => true, // If false, the plugin is only 'recommended' instead of required
     ),
     array(
-        'name'                  => 'Smush', // The plugin name
-        'slug'                  => 'wp-smushit', // The plugin slug (typically the folder name)
-        'version'               => '3.12.3',
+        'name'                  => 'EWWW Image Optimizer', // The plugin name
+        'slug'                  => 'ewww-image-optimizer', // The plugin slug (typically the folder name)
+        'version'               => '7.2.0',
         'required'              => true, // If false, the plugin is only 'recommended' instead of required
     ),
     array(
