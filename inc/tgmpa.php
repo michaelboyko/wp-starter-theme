@@ -124,6 +124,12 @@ $plugins = array(
         'required'              => true, // If false, the plugin is only 'recommended' instead of required
     ),
     array(
+        'name'                  => 'Classic Editor', // The plugin name
+        'slug'                  => 'classic-editor', // The plugin slug (typically the folder name)
+        'version'               => '1.6.3',
+        'required'              => true, // If false, the plugin is only 'recommended' instead of required
+    ),
+    array(
         'name'                  => 'LoginPress | wp-login Custom Login Page Customizer', // The plugin name
         'slug'                  => 'loginpress', // The plugin slug (typically the folder name)
         'version'               => '1.8.0',
