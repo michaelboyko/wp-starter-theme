@@ -15,7 +15,8 @@
 
 			label
 			{
-				@include body-level-2;
+				font-size: 14px;
+				line-height: 24px;
 				display: block;
 			}
 
@@ -27,7 +28,8 @@
 				font-style: italic;
 				@include border-radius(0px);
 				@include appearance(none);
-				@include body-level-4;
+				font-size: 18px;
+				line-height: 28px;
 			}
 
 			textarea
@@ -62,7 +64,8 @@
 
 				.frm_primary_label
 				{
-					@include body-level-2;
+					font-size: 14px;
+					line-height: 24px;
 					margin-bottom: 10px;
 				}
 
@@ -80,7 +83,8 @@
 				.frm_label_button_container
 				{
 					padding: 6px 20px;
-					@include body-level-2;
+					font-size: 14px;
+					line-height: 24px;
 				}
 
 				input[type="radio"]:checked + .frm_label_button_container
@@ -172,7 +176,8 @@
 				label
 				{
 					cursor: pointer;
-					@include body-level-3;
+					font-size: 16px;
+					line-height: 26px;
 				}
 
 			}
@@ -249,20 +254,20 @@
 			background-color: #d21919;
 			color: #fff;
 			padding: 10px;
-			@include body-level-2;
+			font-size: 14px;
+			line-height: 24px;
 		}
 
 		.frm_error_style
 		{
-			font-weight: 500;
 			margin-bottom: 15px;
 		}
 
 		.frm_error
 		{
-			@include body-level-2;
+			font-size: 14px;
+			line-height: 24px;
 		}
-
 	}
 
 	@mixin placeholders

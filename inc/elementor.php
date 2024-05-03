@@ -8,13 +8,6 @@
 // Remove Google Fonts
 add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
 
-// Remove Font Awesome
-add_action( 'elementor/frontend/after_register_styles',function() {
-	foreach( [ 'solid', 'regular', 'brands' ] as $style ) {
-		wp_deregister_style( 'elementor-icons-fa-' . $style );
-	}
-}, 20 );
-
 // Make Elementor Default Editor
 add_filter('get_edit_post_link', 'cm2_make_elementor_default_edit_link', 10, 3 );
 function cm2_make_elementor_default_edit_link($link, $post_id, $context) {

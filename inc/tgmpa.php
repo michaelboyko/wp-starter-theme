@@ -38,12 +38,6 @@ $plugins = array(
         'version'               => '3.9.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
     ),
     array(
-        'name'                  => 'Autoptimize', // The plugin name
-        'slug'                  => 'autoptimize', // The plugin slug (typically the folder name)
-        'version'               => '3.1.3',
-        'required'              => true, // If false, the plugin is only 'recommended' instead of required
-    ),
-    array(
         'name'                  => 'Custom Post Type UI', // The plugin name
         'slug'                  => 'custom-post-type-ui', // The plugin slug (typically the folder name)
         'version'               => '1.5.5',

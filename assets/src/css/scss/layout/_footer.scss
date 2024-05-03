@@ -12,23 +12,6 @@
 		width: 100%;
 	}
 
-	h3
-	{
-
-		@include body-level-4;
-
-		@include r(md)
-		{
-			text-align: left;
-		}
-
-		@include r(sm)
-		{
-			text-align: center;
-		}
-
-	}
-
 	.site-footer-section
 	{
 
@@ -94,7 +77,8 @@
 				{
 					padding: 0;
 					color: var(--ast-global-color-0);
-					@include body-level-4;
+					font-size: 18px;
+					line-height: 28px;
 				}
 
 				&:hover, &.current-menu-item, &.current-menu-parent, &.current-page-ancestor 
@@ -192,7 +176,8 @@
 
 		p
 		{
-			@include body-level-2;
+			font-size: 14px;
+			line-height: 24px;
 		}
 
 	}

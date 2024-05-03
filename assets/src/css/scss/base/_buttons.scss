@@ -11,7 +11,8 @@
 	overflow: hidden !important;
 	z-index: 0;
 	display: inline-block;
-	@include body-level-4;
+	font-size: 18px;
+	line-height: 28px;
 
 	&::after
 	{

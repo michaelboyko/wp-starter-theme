@@ -3,7 +3,8 @@
 
 address, blockquote, body, dd, dl, dt, fieldset, figure, html, legend, li, ol, p, pre, ul
 {
-	@include body-level-4;
+	font-size: 18px;
+	line-height: 28px;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -22,65 +23,12 @@ h1, h2, h3, h4, h5, h6,
 	
 }
 
-.entry-content h1, .entry-content h2,
-.elementor-widget-heading h1.elementor-heading-title, .elementor-widget-heading h2.elementor-heading-title
-{
-
-	@include heading-level-6;
-
-	@include r(xl)
-	{
-		@include heading-level-4;
-	}
-
-	@include r(lg)
-	{
-		@include heading-level-4;
-	}
-
-	@include r(sm)
-	{
-		@include heading-level-1;
-	}
-
-}
-
-.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
-.elementor-widget-heading h3.elementor-heading-title, .elementor-widget-heading h4.elementor-heading-title, .elementor-widget-heading h5.elementor-heading-title, .elementor-widget-heading h6.elementor-heading-title
-{
-
-	@include heading-level-4;
-
-	@include r(lg)
-	{
-		@include heading-level-1;
-	}
-
-	@include r(sm)
-	{
-		@include body-level-6;
-	}
-
-}
-
 .subtitle
 {
 
 	&.elementor-widget:not(:last-child)
 	{
 		margin-bottom: 0px;
-	}
-
-	h1, h2, h3, h4, h5, h6
-	{
-
-		@include heading-level-2;
-
-		@include r(lg)
-		{
-			@include body-level-5;
-		}
-
 	}
 
 }
@@ -100,13 +48,6 @@ p,
 
 	h1, h2, h3, h4, h5, h6
 	{
-
-		@include heading-level-1;
-
-		@include r(sm)
-		{
-			@include body-level-5;
-		}
 
 		&:last-child {
 			margin-bottom: 0;

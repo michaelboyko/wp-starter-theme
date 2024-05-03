@@ -17,7 +17,7 @@ function get_contact_info_shortcode( $atts ) {
                     $output = '<a href="mailto:' . get_field($atts['type'],'option') . '">' . get_field($atts['type'],'option') . '</a>';
                     break;
                 case 'phone':
-                    $output = '<a href="tel:+' . get_tel_prot(get_field($atts['type'],'option'), false) . '">' . get_field($atts['type'],'option') . '</a>';
+                    $output = '<a href="tel:+1' . get_tel_prot(get_field($atts['type'],'option'), false) . '">' . get_field($atts['type'],'option') . '</a>';
                     break;
                 default:
                     $output = get_field($atts['type'],'option');
@@ -25,7 +25,7 @@ function get_contact_info_shortcode( $atts ) {
         } else {
             switch ($atts['type']) {
                 case 'phone-icon':
-                    $output = '<a href="tel:+' . get_tel_prot(get_field('phone','option'), false) . '">' . do_shortcode('[svg id="phone"]') . '</a>';
+                    $output = '<a href="tel:+1' . get_tel_prot(get_field('phone','option'), false) . '">' . do_shortcode('[svg id="phone"]') . '</a>';
                     break;
                 case 'email-icon':
                     $output = '<a href="mailto:' . get_field('email','option') . '">' . do_shortcode('[svg id="email"]') . '</a>';
@@ -73,7 +73,7 @@ function get_svg_shortcode( $atts ) {
                 $output = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M192 416c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zM320 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h224c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V48z"></path></svg>';
                 break;
             case 'right-chevron':
-                $output = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>';
+                $output = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/></svg>';
                 break;
             default:
                 $output = '';
