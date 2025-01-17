@@ -24,8 +24,8 @@ get_header(); ?>
 			<div class="container">
 				<nav id="nav-below" class="navigation" role="navigation">
 					<?php
-						$prev = get_adjacent_post(true, '', true);
-						$next = get_adjacent_post(true, '', false);
+						$prev = get_adjacent_post(false, '', true);
+						$next = get_adjacent_post(false, '', false);
 					?>
 					<div class="nav-next"><?php if ($next) { ?><a href="<?php echo get_permalink($next->ID); ?>" class="btn-blog"><?php _e('Next Post', 'custom_theme'); ?></a><?php } // if ?></div>
 					<div class="nav-previous"><?php if ($prev) { ?><a href="<?php echo get_permalink($prev->ID); ?>" class="btn-blog"><?php _e('Previous Post', 'custom_theme'); ?></a><?php } // if ?></div>

@@ -32,3 +32,14 @@ add_filter( 'astra_tablet_breakpoint', function() {
 add_filter( 'astra_mobile_breakpoint', function() {
     return 500;
 });
+
+// Blog Featured Image
+add_action( 'astra_content_before','blog_single_post_banner' );
+
+function blog_single_post_banner () {
+
+    if ( is_single() && has_post_thumbnail() ) {
+        echo '<div class="featured-image" style="background-image: url(' . get_the_post_thumbnail_url(get_the_ID(),'blog-full-size') . ');"></div>';
+    }
+
+}
