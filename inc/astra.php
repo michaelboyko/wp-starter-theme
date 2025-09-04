@@ -43,3 +43,14 @@ function blog_single_post_banner () {
     }
 
 }
+
+// Disable Astra Title On Pages
+function disable_astra_title() {
+
+    $post_types = array('page'); 
+    if ( ! in_array( get_post_type(), $post_types ) ) { return; } 
+    add_filter( 'astra_the_title_enabled', '__return_false' ); 
+
+}
+
+add_action( 'wp', 'disable_astra_title' );
