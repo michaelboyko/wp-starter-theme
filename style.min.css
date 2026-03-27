@@ -23,14 +23,13 @@ body,html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{-ms-scroll-chaining:none;overscroll-behavior:none}
 ::-moz-selection{background:var(--ast-global-color-0);color:#fff}
 ::selection{background:var(--ast-global-color-0);color:#fff}
-html{scrollbar-color:var(--site-global-color-scrollbars) #e4e4e4}
-body{scrollbar-color:var(--site-global-color-scrollbars) #e4e4e4}
+html{scrollbar-color:var(--ast-global-color-0) #e4e4e4}
+body{scrollbar-color:var(--ast-global-color-0) #e4e4e4}
 ::-webkit-scrollbar{width:17px}
 ::-webkit-scrollbar-track{background:#e4e4e4}
 ::-webkit-scrollbar-thumb{background-color:var(--ast-global-color-0);border-left:1px #e4e4e4 solid;border-right:1px #e4e4e4 solid}
 ::-webkit-scrollbar-button:single-button:vertical:decrement{background:url("assets/dist/images/bg-scrollbar-btn-up.png") center center no-repeat #e4e4e4}
 ::-webkit-scrollbar-button:single-button:vertical:increment{background:url("assets/dist/images/bg-scrollbar-btn-down.png") center center no-repeat #e4e4e4}
-address,blockquote,body,dd,dl,dt,fieldset,figure,html,legend,li,ol,p,pre,ul{font-size:18px;line-height:28px}
 h1,h2,h3,h4,h5,h6,.elementor-widget-heading .elementor-heading-title{margin-bottom:0}
 .entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6,.entry-content p,.entry-content ul,.entry-content ol{margin-bottom:40px}
 .subtitle.elementor-widget:not(:last-child){margin-bottom:0}
@@ -48,11 +47,11 @@ blockquote{padding:20px;margin-bottom:40px}
 blockquote p{font-style:italic;margin:0}
 address{margin-bottom:0}
 hr{background-color:#eee;border:0;height:1px;margin-bottom:40px}
-.elementor-widget-button .elementor-button,.eael-gallery-load-more.elementor-button,.frm_button_submit{-webkit-transition:all .5s ease;transition:all .5s ease;position:relative;overflow:hidden !important;z-index:0;display:inline-block;font-size:18px;line-height:28px}
-.elementor-widget-button .elementor-button::after,.eael-gallery-load-more.elementor-button::after,.frm_button_submit::after{background:#fff;-webkit-box-shadow:0 0 30px 30px #fff;box-shadow:0 0 30px 30px #fff;content:"";height:155px;left:-100%;opacity:.2;position:absolute;top:-50px;-webkit-transform:rotate(35deg);transform:rotate(35deg);-webkit-transition:all 2000ms cubic-bezier(0.19,1,0.22,1);transition:all 2000ms cubic-bezier(0.19,1,0.22,1);width:50px;z-index:-10}
-.elementor-widget-button .elementor-button:hover::after,.eael-gallery-load-more.elementor-button:hover::after,.frm_button_submit:hover::after{left:150%;-webkit-transition:all 2000ms cubic-bezier(0.19,1,0.22,1);transition:all 2000ms cubic-bezier(0.19,1,0.22,1)}
-.elementor-widget-button .elementor-button .elementor-align-icon-right,.eael-gallery-load-more.elementor-button .elementor-align-icon-right,.frm_button_submit .elementor-align-icon-right{display:grid;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:20px}
-.elementor-widget-button .elementor-button .elementor-align-icon-right svg,.eael-gallery-load-more.elementor-button .elementor-align-icon-right svg,.frm_button_submit .elementor-align-icon-right svg{width:15px;height:15px}
+.elementor-widget-button .elementor-button,.eael-gallery-load-more.elementor-button,.frm_button_submit,.ast-custom-button-link .ast-custom-button,.elementor-slide-button,.uael-post__read-more{-webkit-transition:all .5s ease;transition:all .5s ease;position:relative;overflow:hidden !important;z-index:0;display:inline-block;font-size:18px;line-height:28px}
+.elementor-widget-button .elementor-button::after,.eael-gallery-load-more.elementor-button::after,.frm_button_submit::after,.ast-custom-button-link .ast-custom-button::after,.elementor-slide-button::after,.uael-post__read-more::after{background:#fff;-webkit-box-shadow:0 0 30px 30px #fff;box-shadow:0 0 30px 30px #fff;content:"";height:155px;left:-100%;opacity:.2;position:absolute;top:-50px;-webkit-transform:rotate(35deg);transform:rotate(35deg);-webkit-transition:all 2000ms cubic-bezier(0.19,1,0.22,1);transition:all 2000ms cubic-bezier(0.19,1,0.22,1);width:50px;z-index:-10}
+.elementor-widget-button .elementor-button:hover::after,.eael-gallery-load-more.elementor-button:hover::after,.frm_button_submit:hover::after,.ast-custom-button-link .ast-custom-button:hover::after,.elementor-slide-button:hover::after,.uael-post__read-more:hover::after{left:150%;-webkit-transition:all 2000ms cubic-bezier(0.19,1,0.22,1);transition:all 2000ms cubic-bezier(0.19,1,0.22,1)}
+.elementor-widget-button .elementor-button .elementor-align-icon-right,.eael-gallery-load-more.elementor-button .elementor-align-icon-right,.frm_button_submit .elementor-align-icon-right,.ast-custom-button-link .ast-custom-button .elementor-align-icon-right,.elementor-slide-button .elementor-align-icon-right,.uael-post__read-more .elementor-align-icon-right{display:grid;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:20px}
+.elementor-widget-button .elementor-button .elementor-align-icon-right svg,.eael-gallery-load-more.elementor-button .elementor-align-icon-right svg,.frm_button_submit .elementor-align-icon-right svg,.ast-custom-button-link .ast-custom-button .elementor-align-icon-right svg,.elementor-slide-button .elementor-align-icon-right svg,.uael-post__read-more .elementor-align-icon-right svg{width:15px;height:15px}
 .frm_forms form fieldset{padding:0;border:0}
 .frm_forms form fieldset label{font-size:14px;line-height:24px;display:block}
 .frm_forms form fieldset input[type=email],.frm_forms form fieldset input[type=password],.frm_forms form fieldset input[type=search],.frm_forms form fieldset input[type=tel],.frm_forms form fieldset input[type=text],.frm_forms form fieldset input[type=url],.frm_forms form fieldset textarea,.frm_forms form fieldset select{width:100%;border:0;padding:5px 20px;font-style:italic;border-radius:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:18px;line-height:28px}
@@ -83,10 +82,10 @@ hr{background-color:#eee;border:0;height:1px;margin-bottom:40px}
 .frm_forms form .frm_error_style,.frm_forms form .frm_error{background-color:#d21919;color:#fff;padding:10px;font-size:14px;line-height:24px}
 .frm_forms form .frm_error_style{margin-bottom:15px}
 .frm_forms form .frm_error{font-size:14px;line-height:24px}
-.frm_forms form ::-webkit-input-placeholder{opacity:1;color:var(--site-global-color-form-field-text);font-style:italic}
-.frm_forms form :-moz-placeholder{opacity:1;color:var(--site-global-color-form-field-text);font-style:italic}
-.frm_forms form ::-moz-placeholder{opacity:1;color:var(--site-global-color-form-field-text);font-style:italic}
-.frm_forms form :-ms-input-placeholder{opacity:1;color:var(--site-global-color-form-field-text);font-style:italic}
+.frm_forms form ::-webkit-input-placeholder{opacity:1;color:var(--ast-global-color-2);font-style:italic}
+.frm_forms form :-moz-placeholder{opacity:1;color:var(--ast-global-color-2);font-style:italic}
+.frm_forms form ::-moz-placeholder{opacity:1;color:var(--ast-global-color-2);font-style:italic}
+.frm_forms form :-ms-input-placeholder{opacity:1;color:var(--ast-global-color-2);font-style:italic}
 .frm_forms form input:focus:required:invalid::-webkit-input-placeholder{opacity:1;color:red}
 .frm_forms form input:focus:required:invalid:-moz-placeholder{opacity:1;color:red}
 .frm_forms form input:focus:required:invalid::-moz-placeholder{opacity:1;color:red}
@@ -109,8 +108,7 @@ figure{margin:0}
 .ast-above-header.ast-above-header-bar .ast-header-html .address-item{display:grid;grid-template-columns:repeat(2,-webkit-max-content);grid-template-columns:repeat(2,max-content);grid-gap:10px;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .ast-above-header.ast-above-header-bar .ast-header-html .address-item .address-col:first-child{display:grid;grid-template-columns:1fr;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .ast-above-header.ast-above-header-bar .ast-builder-social-element{margin-right:15px}
-.ast-above-header.ast-above-header-bar .ast-builder-social-element:nth-last-child(2){margin-right:0 !important}
-.ast-above-header.ast-above-header-bar .ast-builder-social-element:last-child{margin-right:0 !important;display:none}
+.ast-above-header.ast-above-header-bar .ast-builder-social-element:last-child{margin-right:0 !important}
 .ast-above-header.ast-above-header-bar .ast-builder-social-element svg{fill:var(--ast-global-color-0);width:20px;height:20px;-webkit-transition:fill .5s ease;transition:fill .5s ease}
 .ast-above-header.ast-above-header-bar .ast-builder-social-element svg:hover{fill:var(--ast-global-color-1)}
 .ast-above-header.ast-above-header-bar .ast-builder-grid-row{grid-template-columns:auto -webkit-max-content;grid-template-columns:auto max-content;grid-gap:20px}
@@ -179,6 +177,8 @@ figure{margin:0}
 .elementor-top-section.elementor-section-boxed>.elementor-container .elementor-container{padding:0}
 .elementor-widget:not(:last-child){margin-bottom:40px}
 .elementor-column-gap-default>.elementor-column>.elementor-element-populated{padding:0}
+.error404 #content .ast-container{max-width:100%;padding:0 !important}
+.error404 #content .ast-container #primary{margin:0 !important;padding:0 !important}
 .single-post #content>.ast-container{padding:0 20px}
 .single-post #primary{margin:0}
 .single-post #primary article{padding:0}
@@ -207,7 +207,7 @@ figure{margin:0}
 }@media screen and (max-width:768px){.site-footer .site-footer-section{margin-bottom:40px !important}
 .site-footer .site-footer-section:last-child{margin-bottom:0 !important}
 .single-post .featured-image{height:500px}
-}@media screen and (max-width:500px){.elementor-widget-button .elementor-button,.eael-gallery-load-more.elementor-button,.frm_button_submit{width:100%;text-align:center}
+}@media screen and (max-width:500px){.elementor-widget-button .elementor-button,.eael-gallery-load-more.elementor-button,.frm_button_submit,.ast-custom-button-link .ast-custom-button,.elementor-slide-button,.uael-post__read-more{width:100%;text-align:center}
 .ast-above-header.ast-above-header-bar .ast-builder-grid-row{grid-template-columns:1fr -webkit-max-content;grid-template-columns:1fr max-content;grid-gap:0}
 .ast-above-header.ast-above-header-bar .ast-builder-grid-row .site-header-above-section-left .ast-builder-layout-element{margin-left:auto}
 .ast-above-header.ast-above-header-bar .ast-builder-layout-element{width:100%}
